@@ -1,66 +1,80 @@
 /* 基本樣式設置 */
-body, html {
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('page3.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('page 3.jpg') no-repeat center center fixed;
-    background-size: cover;
+    height: 100vh;
 }
 
 .container {
-    width: 100%;
-    max-width: 600px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
 }
 
-.page {
+.question, .result, .start-button {
     display: none;
 }
 
-.page.active {
+.question.active, .result.active, .start-button.active {
     display: block;
 }
 
-button {
+.question p {
+    margin: 20px 0;
+}
+
+.question label {
     display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #4CAF50;
-    color: white;
+    margin: 10px 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* 将按钮背景颜色设置为绿色 */
+    color: white; /* 按钮文字颜色为白色 */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
 }
 
-button:hover {
-    background-color: #45a049;
+.button-container button:hover {
+    background-color: #45a049; /* 鼠标悬停时按钮颜色为更深的绿色 */
 }
 
-/* 響應式設計 */
-@media (max-width: 600px) {
-    .container {
-        padding: 10px;
-    }
-
-    button {
-        padding: 8px;
-        font-size: 14px;
-    }
-}
-
-/* 圖片的響應式設計 */
 .result img {
-    max-width: 100%; /* 圖片最大寬度設為容器的100% */
-    height: auto; /* 根據圖片的寬度自動調整高度，保持比例 */
-    display: block; /* 確保圖片是塊級元素，避免圖片旁有空隙 */
-    margin: 0 auto 20px; /* 居中顯示圖片，並增加下方空間 */
+    max-width: 100%; /* 图片最大宽度设为容器的100% */
+    height: auto; /* 根据图片的宽度自动调整高度，保持比例 */
+    display: block; /* 确保图片是块级元素，避免图片旁有空隙 */
+    margin: 0 auto 20px; /* 居中显示图片，并增加下方空间 */
+}
+
+.signup-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* 将报名按钮背景颜色设置为绿色 */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.signup-button:hover {
+    background-color: #45a049; /* 鼠标悬停时按钮颜色为更深的绿色 */
 }
