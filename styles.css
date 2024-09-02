@@ -59,7 +59,7 @@ body {
 }
 
 .result img {
-    max-width: 100%; /* 图片最大宽度设为容器的100% */
+    max-width: 80%; /* 图片最大宽度设为容器的100% */
     height: auto; /* 根据图片的宽度自动调整高度，保持比例 */
     display: block; /* 确保图片是块级元素，避免图片旁有空隙 */
     margin: 0 auto 20px; /* 居中显示图片，并增加下方空间 */
